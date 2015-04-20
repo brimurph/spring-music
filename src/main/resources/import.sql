@@ -27,7 +27,7 @@ insert into track_artists (track_id, artists_id) values (5, 1);
 insert into track_artists (track_id, artists_id) values (6, 1);
 insert into track_artists (track_id, artists_id) values (7, 1);
 
-insert into member (name) values ('Brian Murphy');
-insert into member (name) values ('Paul Fisher');
+insert into person (name) values ('Brian Murphy');
+insert into person (name) values ('Paul Fisher');
 
-insert into playlist (name, member_id) values ('Classic Rock', 1);
+insert into playlist (name, person_id) values ('Classic Rock', 1);

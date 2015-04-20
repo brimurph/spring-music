@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Member {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,7 +12,7 @@ public class Member {
 
     private String name;
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "person")
     private Set<Playlist> playlists;
 
     public long getId() {

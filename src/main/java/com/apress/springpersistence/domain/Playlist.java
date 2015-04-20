@@ -13,7 +13,7 @@ public class Playlist {
     private String name;
 
     @ManyToOne
-    private Member member;
+    private Person person;
 
     @ManyToMany
     private Set<Track> tracks;
@@ -34,12 +34,12 @@ public class Playlist {
         this.name = name;
     }
 
-    public Member getMember() {
-        return member;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setMember(Member member) {
-        this.member = member;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public Set<Track> getTracks() {
