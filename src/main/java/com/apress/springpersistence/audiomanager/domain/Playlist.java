@@ -1,10 +1,10 @@
-package com.apress.springpersistence.domain;
+package com.apress.springpersistence.audiomanager.domain;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Artist {
+public class Playlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,9 +12,11 @@ public class Artist {
 
     private String name;
 
-    //@OneToMany(mappedBy = "artist")
+    @ManyToOne
+    private Person person;
+
     @ManyToMany
-    private Set<Album> albums;
+    private Set<Track> tracks;
 
     public long getId() {
         return id;
@@ -32,12 +34,20 @@ public class Artist {
         this.name = name;
     }
 
-    public Set<Album> getAlbums() {
-        return albums;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setAlbums(Set<Album> albums) {
-        this.albums = albums;
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public Set<Track> getTracks() {
+        return tracks;
+    }
+
+    public void setTracks(Set<Track> tracks) {
+        this.tracks = tracks;
     }
 
 }

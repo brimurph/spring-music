@@ -1,6 +1,6 @@
-package com.apress.springpersistence.service;
+package com.apress.springpersistence.audiomanager.service;
 
-import com.apress.springpersistence.domain.Album;
+import com.apress.springpersistence.audiomanager.domain.Album;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 //@RepositoryRestResource(collectionResourceRel = "albums", path = "albums")

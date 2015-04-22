@@ -1,4 +1,4 @@
-package com.apress.springpersistence.test;
+package com.apress.springpersistence.audiomanager.test;
 
 import org.junit.Test;
 import org.junit.Assert;

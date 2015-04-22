@@ -1,13 +1,13 @@
-package com.apress.springpersistence.test;
+package com.apress.springpersistence.audiomanager.test;
 
+import com.apress.springpersistence.audiomanager.service.PersonRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.apress.springpersistence.SpringMusicApplication;
-import com.apress.springpersistence.service.PersonRepository;
+import com.apress.springpersistence.audiomanager.SpringMusicApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringMusicApplication.class)

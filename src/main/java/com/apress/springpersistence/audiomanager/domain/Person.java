@@ -1,4 +1,4 @@
-package com.apress.springpersistence.domain;
+package com.apress.springpersistence.audiomanager.domain;
 
 import javax.persistence.*;
 import java.util.Set;

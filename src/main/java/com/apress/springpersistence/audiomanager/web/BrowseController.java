@@ -1,7 +1,7 @@
-package com.apress.springpersistence.web;
+package com.apress.springpersistence.audiomanager.web;
 
-import com.apress.springpersistence.domain.Playlist;
-import com.apress.springpersistence.service.PlaylistRepository;
+import com.apress.springpersistence.audiomanager.domain.Playlist;
+import com.apress.springpersistence.audiomanager.service.PlaylistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpEntity;
