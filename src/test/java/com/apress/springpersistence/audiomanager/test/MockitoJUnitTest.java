@@ -1,7 +1,5 @@
 package com.apress.springpersistence.audiomanager.test;
 
-import com.apress.springpersistence.audiomanager.domain.Person;
-import com.apress.springpersistence.audiomanager.service.PersonRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
@@ -10,6 +8,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import static org.mockito.Mockito.when;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import com.apress.springpersistence.audiomanager.domain.Person;
+import com.apress.springpersistence.audiomanager.service.PersonRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MockitoJUnitTest {

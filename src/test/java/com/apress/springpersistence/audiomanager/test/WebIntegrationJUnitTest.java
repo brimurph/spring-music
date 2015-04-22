@@ -1,15 +1,17 @@
 package com.apress.springpersistence.audiomanager.test;
 
-import com.apress.springpersistence.audiomanager.SpringMusicApplication;
 import org.apache.http.HttpStatus;
 import static org.hamcrest.Matchers.*;
 import static com.jayway.restassured.RestAssured.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.apress.springpersistence.audiomanager.SpringMusicApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringMusicApplication.class)
