@@ -6,10 +6,10 @@ import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SpringMusicApplication {
+public class AudioManagerApplication {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SpringMusicApplication.class, args);
+        SpringApplication.run(AudioManagerApplication.class, args);
     }
 
 //    @Bean(initMethod = "start", destroyMethod = "stop")

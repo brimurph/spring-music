@@ -12,14 +12,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.apress.springpersistence.audiomanager.SpringMusicApplication;
+import com.apress.springpersistence.audiomanager.AudioManagerApplication;
 import com.apress.springpersistence.audiomanager.domain.Person;
 import com.apress.springpersistence.audiomanager.service.PersonRepository;
 
 @Transactional()
 @TransactionConfiguration(defaultRollback = true)
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SpringMusicApplication.class)
+@SpringApplicationConfiguration(classes = AudioManagerApplication.class)
 public class IntegrationJUnitTest {
 
     Person person;
