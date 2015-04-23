@@ -1,9 +1,14 @@
 package com.apress.springpersistence.audiomanager.domain;
 
-import javax.persistence.*;
+import lombok.*;
 import java.util.Set;
+import javax.persistence.*;
 
+@Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Track {
 
     @Id
@@ -18,45 +23,5 @@ public class Track {
 
     @ManyToMany
     private Set<Artist> artists;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    public Album getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(Album album) {
-        this.album = album;
-    }
-
-    public Set<Artist> getArtists() {
-        return artists;
-    }
-
-    public void setArtists(Set<Artist> artists) {
-        this.artists = artists;
-    }
 
 }

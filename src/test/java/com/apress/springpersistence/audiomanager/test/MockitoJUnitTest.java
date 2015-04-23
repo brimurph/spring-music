@@ -22,24 +22,20 @@ public class MockitoJUnitTest {
 
     @Before
     public void setUp() {
-        person = new Person();
-        person.setId((long) 1);
-        person.setName("Test User");
+        person = Person.builder().id((long) 123).name("Test User").build();
         when(personRepository.count()).thenReturn((long) 1);
-        when(personRepository.findOne((long) 1)).thenReturn(person);
+        when(personRepository.findOne((long) 123)).thenReturn(person);
     }
 
     @Test
     public void testMockPersonRetrieval() {
-        Assert.assertEquals("Test User", personRepository.findOne((long) 1).getName());
+        Assert.assertEquals("Test User", personRepository.findOne((long) 123).getName());
     }
 
     @Test
     public void testThatMockRepositorySaveDoesNothing() {
         Assert.assertEquals(1, this.personRepository.count());
-        Person bogusPerson = new Person();
-        person.setId((long) 2);
-        person.setName("Bogus Test User");
+        Person bogusPerson = Person.builder().id((long) 987).name("Bogus Test User").build();
         personRepository.save(bogusPerson);
         Assert.assertNotEquals(2, this.personRepository.count());
     }

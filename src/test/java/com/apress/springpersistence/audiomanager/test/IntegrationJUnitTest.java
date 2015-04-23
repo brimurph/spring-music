@@ -1,19 +1,19 @@
 package com.apress.springpersistence.audiomanager.test;
 
+import org.junit.Test;
 import org.junit.After;
 import org.junit.Assert;
-import org.junit.Test;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.apress.springpersistence.audiomanager.AudioManagerApplication;
 import com.apress.springpersistence.audiomanager.domain.Person;
+import com.apress.springpersistence.audiomanager.AudioManagerApplication;
 import com.apress.springpersistence.audiomanager.service.PersonRepository;
 
 @Transactional()
@@ -29,8 +29,7 @@ public class IntegrationJUnitTest {
 
     @Before
     public void setUp() {
-        person = new Person();
-        person.setName("Test User");
+        person = Person.builder().name("Test User").build();
         personRepository.save(person);
     }
 

@@ -2,12 +2,16 @@ package com.apress.springpersistence.audiomanager.test;
 
 import org.apache.http.HttpStatus;
 import static org.hamcrest.Matchers.*;
+import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
 import static com.jayway.restassured.module.mockmvc.RestAssuredMockMvc.*;
 
 import org.junit.Test;
+import org.junit.Before;
 import org.junit.runner.RunWith;
 
 import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -17,6 +21,14 @@ import com.apress.springpersistence.audiomanager.AudioManagerApplication;
 @SpringApplicationConfiguration(classes = AudioManagerApplication.class)
 @WebIntegrationTest
 public class WebIntegrationJUnitTest {
+
+    @Autowired
+    private WebApplicationContext context;
+
+    @Before
+    public void setUp() {
+        RestAssuredMockMvc.webAppContextSetup(context);
+    }
 
     @Test
     public void canFetchPlaylist() {
